@@ -35,5 +35,4 @@ public class Criteria {
 	public String getValue(String parameter) {
 		return criteria.get(parameter);
 	}
-
 }

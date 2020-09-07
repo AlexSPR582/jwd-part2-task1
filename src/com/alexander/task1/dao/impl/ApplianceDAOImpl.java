@@ -27,7 +27,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
              BufferedReader br = new BufferedReader(fr)) {
             String line;
             while ((line = br.readLine()) != null) {
-                if (check(line, criteria)) {
+                if (matchParameters(line, criteria)) {
                     Appliance appliance = parser.parse(line);
                     appliances.add(appliance);
                 }
@@ -48,7 +48,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
         }
     }
 
-    private boolean check(String line, Criteria criteria) {
+    private boolean matchParameters(String line, Criteria criteria) {
 	    String name = criteria.getGroupSearchName();
 	    if (!line.startsWith(name)) {
 	        return false;

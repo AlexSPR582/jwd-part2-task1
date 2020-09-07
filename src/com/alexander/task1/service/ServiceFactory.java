@@ -4,7 +4,7 @@ import com.alexander.task1.service.impl.ApplianceServiceImpl;
 
 public final class ServiceFactory {
 	private static ServiceFactory instance;
-	private static ApplianceService applianceService = new ApplianceServiceImpl();
+	private final ApplianceService applianceService = new ApplianceServiceImpl();
 
 	public static ServiceFactory getInstance() {
 		if (instance == null) {

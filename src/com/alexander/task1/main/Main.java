@@ -11,7 +11,6 @@ import com.alexander.task1.view.ApplianceListView;
 import java.util.List;
 
 public class Main {
-
 	public static void main(String[] args) throws ServiceException, ViewException {
 		ServiceFactory factory = ServiceFactory.getInstance();
 		ApplianceService service = factory.getApplianceService();
